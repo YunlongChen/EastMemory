@@ -101,8 +101,12 @@
 			"path": "pages/plugin/verticalnav",
 			"style": {}
 		}
-	    ,{
+        ,{
             "path" : "pages/chat/chat",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/chat/swiper",
             "style" : {}
         }
     ],

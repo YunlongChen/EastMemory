@@ -5,6 +5,12 @@
 		<plugin v-if="PageCur=='plugin'"></plugin>
 		<chat v-if="PageCur=='chat'"></chat>
 		<view class="cu-bar tabbar bg-white shadow foot">
+			<view class="action" @click="NavChange" data-cur="chat">
+				<view class='cuIcon-cu-image'>
+					<image :src="'/static/tabbar/chat' + [PageCur == 'chat'?'_cur':''] + '.png'"></image>
+				</view>
+				<view :class="PageCur=='chat'?'text-green':'text-gray'">聊天</view>
+			</view>
 			<view class="action" @click="NavChange" data-cur="basics">
 				<view class='cuIcon-cu-image'>
 					<image :src="'/static/tabbar/basics' + [PageCur=='basics'?'_cur':''] + '.png'"></image>
@@ -23,12 +29,6 @@
 				</view>
 				<view :class="PageCur=='plugin'?'text-green':'text-gray'">扩展</view>
 			</view>
-			<view class="action" @click="NavChange" data-cur="chat">
-				<view class='cuIcon-cu-image'>
-					<image :src="'/static/tabbar/chat' + [PageCur == 'chat'?'_cur':''] + '.png'"></image>
-				</view>
-				<view :class="PageCur=='chat'?'text-green':'text-gray'">扩展</view>
-			</view>
 		</view>
 	</view>
 </template>
@@ -37,7 +37,7 @@
 	export default {
 		data() {
 		return {
-				PageCur: 'basics'
+				PageCur: 'chat'
 			}
 		},
 		methods: {

@@ -13,6 +13,9 @@ Vue.component('plugin',plugin)
 import cuCustom from './colorui/components/cu-custom.vue'
 Vue.component('cu-custom',cuCustom)
 
+import chat from './pages/chat/home.vue'
+Vue.component('chat',chat)
+
 Vue.config.productionTip = false
 
 App.mpType = 'app'

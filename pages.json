@@ -101,7 +101,11 @@
 			"path": "pages/plugin/verticalnav",
 			"style": {}
 		}
-	],
+	    ,{
+            "path" : "pages/chat/chat",
+            "style" : {}
+        }
+    ],
 	"globalStyle": {
 		"mp-alipay": {
 			/* 支付宝小程序特有相关 */

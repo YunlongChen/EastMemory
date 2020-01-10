@@ -1,18 +1,7 @@
-<template>
+<template name="chat">
 	<view>
-		<view class="cu-list menu" :class="[menuBorder?'sm-border':'',menuBar?'margin-top':'']" v-if="skin">
-			<view class="cu-item">
-				<view class="content padding-tb-sm">
-					<view>
-						<text class="cuIcon-clothesfill text-blue margin-right-xs"></text> 多行Item</view>
-					<view class="text-gray text-sm">
-						<text class="cuIcon-infofill margin-right-xs"></text> 小目标还没有实现！</view>
-				</view>
-				<view class="action">
-					<switch class="switch-sex" @change="SwitchSex" :class="skin?'checked':''" :checked="skin?true:false"></switch>
-				</view>
-			</view>
-		</view>
+		<cu-custom :isBack="false" bgColor="bg-gradual-pink">
+		</cu-custom>
 		<view class="cu-bar bg-white solid-bottom margin-top">
 			<view class="action">
 				<text class="cuIcon-title text-orange "></text> 消息列表
@@ -105,6 +94,19 @@
 				</view>
 			</view>
 		</view>
+		<view class="cu-list menu" :class="[menuBorder?'sm-border':'',menuBar?'margin-top':'']" v-if="skin">
+			<view class="cu-item">
+				<view class="content padding-tb-sm">
+					<view>
+						<text class="cuIcon-clothesfill text-blue margin-right-xs"></text> 多行Item</view>
+					<view class="text-gray text-sm">
+						<text class="cuIcon-infofill margin-right-xs"></text> 小目标还没有实现！</view>
+				</view>
+				<view class="action">
+					<switch class="switch-sex" @change="SwitchSex" :checked="true"></switch>
+				</view>
+			</view>
+		</view>
 		<view class="cu-tabbar-height"></view>
 	</view>
 </template>
@@ -157,8 +159,6 @@
 		},
 		methods: {
 			UpdateState(e) {
-				this.skin = !this.skin
-				console.log(e.detail)
 				uni.navigateTo({
 					url: '../chat/chat?userId=123123',
 					success: res => {},
